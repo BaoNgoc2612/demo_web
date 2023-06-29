@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete BookShelf</title>
+</head>
+<body>
+    <h1>Select bookShelf to delete</h1>
+    <form action="/delete_bookshelf" method="get">
+        <select name="number">
+            {% for book_shelf in book_shelfs %}
+            <option value="{{ book_shelf.number }}">{{ book_shelf.number }} - {{ book_shelf.location }}</option>
+            {% endfor %}
+        </select>
+        <br><br>
+        <input type="submit" value="Delete">
+    </form>
+</body>
+</html>

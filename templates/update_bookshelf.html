@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update BookShelf</title>
+</head>
+<body>
+    <h1>Update BookShelf</h1>
+    <form action="/update_bookshelf_commit" method="get">
+        Number: <select name="number">
+            {% for book_shelf in book_shelfs %}
+            <option value="{{ book_shelf.number }}">{{ book_shelf.number }} - {{ book_shelf.location }}</option>
+            {% endfor %}
+        </select><br><br>  
+        Location: <input type="text" name="location"><br><br>
+        <input type="submit" value="Update">
+    </form>
+</body>
+</html>

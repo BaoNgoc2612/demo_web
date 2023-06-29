@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Book</title>
+</head>
+<body>
+    <h1>Update Book</h1>
+    <form action="/update_book_commit" method="get">
+        Book ID: <select name="book_id">
+            {% for book in books %}
+            <option value="{{ book.book_id }}">{{ book.book_id }} - {{ book.book_name }}</option>
+            {% endfor %}
+        </select><br><br>  
+		Book Name: <input type="text" name="book_name"><br><br>
+        Authors: <input type="text" name="authors"><br><br>
+        Publishing year: <input type="text" name="publishing_year"><br><br>
+        Kind of Book: <input type="text" name="kind_of_book"><br><br> 
+        Cost: <input type="text" name="cost"><br><br>  
+        Quantity: <input type="text" name="quantity"><br><br>
+        <input type="submit" value="Update">
+    </form>
+</body>
+</html>
+

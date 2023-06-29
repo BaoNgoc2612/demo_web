@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Invoice </title>
+</head>
+<body>
+    <h1>Select invoice to delete</h1>
+    <form action="/delete_invoice" method="get">
+        <select name="invoice_id">
+            {% for invoice in invoices %}
+            <option value="{{ invoice.invoice_id }}">{{ invoice.invoice_id }}</option>
+            {% endfor %}
+        </select>
+        <br><br>
+        <input type="submit" value="Delete">
+    </form>
+</body>
+</html>

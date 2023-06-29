@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông Tin Chi Tiết Hóa Đơn</title>
+</head>
+<body>
+    <h1> Thông Tin Chi Tiết Hóa Đơn</h1>
+    <table border="2">
+        <tr>
+            <th> Invoice ID </th>
+            <th> Book ID </th>
+            <th> Quantity </th>
+            <th> Cost Book</th>
+            <th> Total</th>
+            <th> Customer ID </th>
+        </tr> 
+        {% for invoice_detail in invoice_details%}
+        <tr>
+            <td>{{ invoice_detail.invoice_id }}</td>
+            <td>{{ invoice_detail.book_id }}</td>
+            <td>{{ invoice_detail.quantity }}</td>
+            <td>{{ invoice_detail.cost_book }}</td>
+            <td>{{ invoice_detail.total }}</td>
+            <td>{{ invoice_detail.customer_id }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="{{ url_for('select') }}">Trang chủ</a>
+    </body>
+</html>

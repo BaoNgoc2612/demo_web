@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Find Work At</title>
+</head>
+<body>
+	<h1>Find Work At</h1>
+	<form action="{{ url_for('find_work_at_result') }}" method="get">
+		<label for="employee_id">Employee ID:</label>
+		<input type="text" id="employee_id" name="employee_id"><br><br>
+		<input type="submit" value="Submit">
+	</form>
+</body>
+</html>

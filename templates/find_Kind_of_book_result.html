@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông Tin Lọai Sách</title>
+</head>
+<body>
+    <h1> Thông Tin Thể Loại Sách</h1>
+    <table border="2">
+        <tr>
+            <th> ID </th>
+            <th> Name </th>
+            <th> BookShelf Number </th>
+        </tr> 
+        <tr>
+            <td>{{ kind_of_book.id }}</td>
+            <td>{{ kind_of_book.name }}</td>
+            <td>{{ kind_of_book.book_shelf_number }}</td>
+        </tr>
+    </table>
+    <a href="{{ url_for('select') }}">Trang chủ</a>
+    </body>
+</html>

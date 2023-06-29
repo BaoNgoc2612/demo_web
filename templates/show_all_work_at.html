@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Show All Work At</title>
+</head>
+<body>
+	<h1>Show All Work At</h1>
+	<table border="2">
+			<tr>
+				<th>ID</th>
+				<th>Employee ID</th>
+				<th>Company ID</th>
+				<th>Start Date</th>
+				<th>End Date</th>
+			</tr>
+		<tbody>
+			{% for work_at in work_ats %}
+			<tr>
+				<td>{{ work_at.id }}</td>
+				<td>{{ work_at.employee_id }}</td>
+				<td>{{ work_at.company_id }}</td>
+				<td>{{ work_at.start_date }}</td>
+				<td>{{ work_at.end_date }}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+    <a href="{{ url_for('select') }}">Trang chủ</a>
+</body>
+</html>

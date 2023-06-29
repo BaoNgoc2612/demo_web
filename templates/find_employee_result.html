@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông Tin Nhân Viên</title>
+</head>
+<body>
+    <h1> Thông Tin Nhân Viên</h1>
+    <table border="2">
+        <tr>
+            <th> Employee ID </th>
+            <th> Employee Name </th>
+            <th> Gender </th>
+            <th> Birthday </th>
+            <th> Phone </th>
+            <th> Email </th>
+            <th> Address </th>
+            <th> Position </th>
+            <th> Salary </th>
+        </tr> 
+        <tr>
+            <td>{{ employee.employee_id }}</td>
+            <td>{{ employee.employee_name }}</td>
+            <td>{{ employee.gender }}</td>
+            <td>{{ employee.birthday }}</td>
+            <td>{{ employee.phone }}</td>
+            <td>{{ employee.email }}</td>
+            <td>{{ employee.address }}</td>
+            <td>{{ employee.position }}</td>
+            <td>{{ employee.salary }}</td>   
+        </tr>
+    </table>
+    <a href="{{ url_for('select') }}">Trang chủ</a>
+    </body>
+</html>

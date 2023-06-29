@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Delete Work At</title>
+</head>
+<body>
+    <h1>Show All Work At</h1>
+	<table border="2">
+			<tr>
+				<th>ID</th>
+				<th>Employee ID</th>
+				<th>Company ID</th>
+				<th>Start Date</th>
+				<th>End Date</th>
+			</tr>
+		<tbody>
+			{% for work_at in work_ats %}
+			<tr>
+				<td>{{ work_at.id }}</td>
+				<td>{{ work_at.employee_id }}</td>
+				<td>{{ work_at.company_id }}</td>
+				<td>{{ work_at.start_date }}</td>
+				<td>{{ work_at.end_date }}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+	<h2>Delete Work At</h1>
+	<form action="{{ url_for('delete_work_at') }}" method="get">
+		<label for="employee_id">Employee ID:</label>
+		<select name="employee_id" id="employee_id">
+			{% for work_at in work_ats %}
+			<option value="{{ work_at.employee_id }}">{{ work_at.employee_id }}</option>
+			{% endfor %}
+		</select><br><br>
+		<input type="submit" value="Delete">
+	</form>
+</body>
+</html>

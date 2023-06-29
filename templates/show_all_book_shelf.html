@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông Tin Kệ Sách</title>
+</head>
+<body>
+    <h1> Thông Tin Kệ Sách</h1>
+    <table border="2">
+        <tr>
+            <th> Number </th>
+            <th> Location</th>
+        </tr> 
+        {% for book_shelf in book_shelfs %}
+        <tr>
+            <td>{{ book_shelf.number }}</td>
+            <td>{{ book_shelf.location }}</td>      
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="{{ url_for('select') }}">Trang chủ</a>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Book </title>
+</head>
+<body>
+    <h1> Thông Tin Sách</h1>
+    <table border="2">
+        <tr>
+            <th> Book ID </th>
+            <th> Book Name </th>
+            <th> Authors </th>
+            <th> Publishing Year </th>
+            <th> Kind of Book</th>
+            <th> Cost </th>
+            <th> Quantity </th>
+        </tr> 
+        {% for book in books %}
+        <tr>
+            <td>{{ book.book_id }}</td>
+            <td>{{ book.book_name }}</td>
+            <td>{{ book.authors }}</td>
+            <td>{{ book.publishing_year }}</td>
+            <td>{{ book.kind_of_book }}</td>
+            <td>{{ book.cost }}</td>
+            <td>{{ book.quantity }}</td>   
+        </tr>
+        {% endfor %}
+    </table>
+    </body>
+<body>
+    <h1>Select book to delete</h1>
+    <form action="/delete_book" method="get">
+        <select name="book_id">
+            {% for book in books %}
+            <option value="{{ book.book_id }}">{{ book.book_name }}</option>
+            {% endfor %}
+        </select>
+        <br><br>
+        <input type="submit" value="Delete">
+    </form>
+</body>
+</html>

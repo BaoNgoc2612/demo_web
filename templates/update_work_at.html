@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Update Work At</title>
+</head>
+<body>
+    
+	<h1>Update Work At</h1>
+	<form action="{{ url_for('update_work_at_commit') }}" method="get">
+		<label for="employee_id">Employee ID:</label>
+		<select name="employee_id" id="employee_id">
+			{% for work_at in work_ats %}
+			<option value="{{ work_at.employee_id }}">{{ work_at.employee_id }}</option>
+			{% endfor %}
+		</select><br><br>
+		<label for="number_book_shelf">Number Book Shelf:</label>
+		<input type="text" id="number_book_shelf" name="number_book_shelf"><br><br>
+		<input type="submit" value="Submit">
+	</form>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Customer</title>
+</head>
+<body>
+    <h1>Select customer to delete</h1>
+    <form action="/delete_customer" method="get">
+        <select name="customer_id">
+            {% for customer in customers %}
+            <option value="{{ customer.customer_id }}">{{ customer.customer_name }}</option>
+            {% endfor %}
+        </select>
+        <br><br>
+        <input type="submit" value="Delete">
+    </form>
+</body>
+</html>

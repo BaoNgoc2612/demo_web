@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Customer</title>
+</head>
+<body>
+    <h1>Update Customer</h1>
+    <form action="/update_customer_commit" method="get">
+        ID: <select name="customer_id">
+            {% for customer in customers %}
+            <option value="{{ customer.customer_id }}">{{ customer.customer_id }} - {{ customer.customer_name }}</option>
+            {% endfor %}
+        </select><br><br>  
+        Name: <input type="text" name="customer_name"><br><br>
+        Address: <input type="text" name="address"><br><br>
+        Phone: <input type="text" name="phone"><br><br>
+        Email: <input type="text" name="email"><br><br>
+        <input type="submit" value="Update">
+    </form>
+</body>
+</html>

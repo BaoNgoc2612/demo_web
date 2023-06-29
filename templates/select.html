@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+</head>
+<body>
+  <h1 style="text-align:center;"> Home </h1>
+  <form>
+    <fieldset>
+      <legend>Customer</legend>
+      <button formaction="{{ url_for('addNewCustomer') }}">Add Customer</button>
+      <button formaction="{{ url_for('find_customer') }}">Find Customers</button>
+      <button formaction="{{ url_for('showAllCustomer') }}">Show All Customers</button>
+      <button formaction="{{ url_for('infoCustomer') }}">Update Customer</button>
+      <button formaction="{{ url_for('in_fo_Customer') }}">Delete Customer</button>
+    </fieldset>
+  </form>
+  <form>
+    <fieldset>
+      <legend>Employee</legend>
+      <button formaction="{{ url_for('addNewEmployee') }}">Add Employee</button>
+      <button formaction="{{ url_for('find_employee') }}">Find Employee</button>
+      <button formaction="{{ url_for('showAllEmployee') }}">Show All Employee</button>
+      <button formaction="{{ url_for('infoEmployee') }}">Update Employee</button>
+      <button formaction="{{ url_for('in_fo_Employee') }}">Delete Employee</button>
+    </fieldset>
+  </form>
+  <form>
+    <fieldset>
+      <legend>BookShelf</legend>
+      <button formaction="{{ url_for('addNewBookShelf') }}">Add BookShelf</button>
+      <button formaction="{{ url_for('find_book_shelf') }}">Find BookShelf</button>
+      <button formaction="{{ url_for('showAllBookShelf') }}">Show All BookShelf</button>
+      <button formaction="{{ url_for('infoBookShelf') }}">Update BookShelf</button>
+      <button formaction="{{ url_for('in_fo_BookShelf') }}">Delete BookShelf</button>
+    </fieldset>
+  </form>
+  <form>
+    <fieldset>
+      <legend> Kind of Book </legend>
+      <button formaction="{{ url_for('add_New_Kind_of_book') }}">Add Kind of Book</button>
+      <button formaction="{{ url_for('find_Kind_of_book') }}">Find Kind of Book</button>
+      <button formaction="{{ url_for('show_All_Kind_of_book') }}">Show All Kind of Book</button>
+      <button formaction="{{ url_for('info_Kind_of_book') }}">Update Kind of Book</button>
+      <button formaction="{{ url_for('in_fo_Kind_of_book') }}">Delete Kind of Book</button>
+    </fieldset>
+  </form>
+  <form>
+    <fieldset>
+      <legend> Book </legend>
+      <button formaction="{{ url_for('addNewBook') }}">Add Book</button>
+      <button formaction="{{ url_for('find_book') }}">Find Book</button>
+      <button formaction="{{ url_for('showAllBook') }}">Show All Book</button>
+      <button formaction="{{ url_for('infoBook') }}">Update Book</button>
+      <button formaction="{{ url_for('in_fo_Book') }}">Delete Book</button>
+    </fieldset>
+  </form>
+  <form>
+    <fieldset>
+      <legend> Invoice </legend>
+      <button formaction="{{ url_for('addNewInvoice') }}">Add Invoice</button>
+      <button formaction="{{ url_for('find_invoice') }}">Find Invoice</button>
+      <button formaction="{{ url_for('show_All_Invoice') }}">Show All Invoice</button>
+      <button formaction="{{ url_for('infoInvoice') }}">Update Invoice</button>
+      <button formaction="{{ url_for('in_fo_Invoice') }}">Delete Invoice</button>
+    </fieldset>
+  </form>
+  <form>
+    <fieldset>
+      <legend> Invoice Detail </legend>
+      <button formaction="{{ url_for('addNewInvoiceDetails') }}">Add Invoice Detail  </button>
+      <button formaction="{{ url_for('Find_invoice_details') }}">Find Invoice Detail </button>
+      <button formaction="{{ url_for('Show_All_Invoice_Details') }}">Show All Invoice Detail </button>
+      <button formaction="{{ url_for('InfoInvoiceDetails') }}">Update Invoice Detail </button>
+      <button formaction="{{ url_for('In_fo_Invoice_Details') }}">Delete Invoice Detail </button>
+    </fieldset>
+  </form>
+  <form>
+    <fieldset>
+      <legend> Work at </legend>
+      <button formaction="{{ url_for('addNewWorkAt') }}">Add Work At  </button>
+      <button formaction="{{ url_for('find_work_at') }}">Find Work At </button>
+      <button formaction="{{ url_for('show_All_Work_at') }}">Show All Work At </button>
+      <button formaction="{{ url_for('infoWork_at') }}">Update Work At </button>
+      <button formaction="{{ url_for('in_fo_Work_at') }}">Delete Work At </button>
+    </fieldset>
+  </form>
+</body>
+</html>

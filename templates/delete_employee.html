@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Employee</title>
+</head>
+<body>
+    <h1>Select employee to delete</h1>
+    <form action="/delete_employee" method="get">
+        <select name="employee_id">
+            {% for employee in employees %}
+            <option value="{{ employee.employee_id }}">{{ employee.employee_name }}</option>
+            {% endfor %}
+        </select>
+        <br><br>
+        <input type="submit" value="Delete">
+    </form>
+</body>
+</html>

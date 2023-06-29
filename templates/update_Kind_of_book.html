@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Kind of Book</title>
+</head>
+<body>
+    <h1>Update Kind of Book</h1>
+    <form action="/update_Kind_of_book_commit" method="get">
+        ID: <select name="id">
+            {% for kind_of_book in kind_of_books %}
+            <option value="{{ kind_of_book.id }}">{{ kind_of_book.id }} - {{ kind_of_book.name }}</option>
+            {% endfor %}
+        </select><br><br>  
+        Name: <input type="text" name="name"><br><br>
+        BookShelf Number: <input type="text" name="name"><br><br>
+        <input type="submit" value="Update">
+    </form>
+</body>
+</html>
